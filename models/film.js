@@ -17,7 +17,7 @@ const filmSchema = new mongoose.Schema(
     director: { type: String, required: true },
     releaseYear: { type: Number, required: true },
     description: { type: String, required: true },
-    image: { type: String, required: true },
+    img: { type: String, required: true },
     comments: [commentSchema],
     likedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
   },
