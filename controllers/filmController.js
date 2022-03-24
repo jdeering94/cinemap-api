@@ -18,9 +18,18 @@ const getAllFilms = async (req, res, next) => {
   }
 };
 
+const getFilmById = async (req, res, next) => {
+  try {
+    const film = await Film.findById(req.params.id);
+    !film ? res.status(404) : res.status(200).json(film);
+  } catch (e) {
+    next(e);
+  }
+};
+
 const getAllFilmsByContinent = async (req, res, next) => {
   try {
-    const film = await Film.find({ continent: req.params });
+    const film = await Film.find({ continent: req.params.continent });
     return res.status(200).json(film);
   } catch (e) {
     next(e);
@@ -59,5 +68,6 @@ export default {
   getAllFilms,
   updateFilm,
   deleteFilm,
+  getFilmById,
   getAllFilmsByContinent,
 };

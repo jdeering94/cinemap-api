@@ -12,6 +12,7 @@ router
 router
   .route('/film/:id')
   .put(filmController.updateFilm)
+  .get(filmController.getFilmById)
   .delete(filmController.deleteFilm);
 
 router.route('/film/:continent').get(filmController.getAllFilmsByContinent);
