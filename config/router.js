@@ -15,7 +15,9 @@ router
   .get(filmController.getFilmById)
   .delete(filmController.deleteFilm);
 
-router.route('/film/:continent').get(filmController.getAllFilmsByContinent);
+router
+  .route('/film/continent/:continent')
+  .get(filmController.getAllFilmsByContinent);
 
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);
