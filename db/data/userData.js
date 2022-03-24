@@ -3,7 +3,7 @@ const createUser = (username, email, password) => {
 };
 
 const users = [
-  createUser('user1', 'user@email.com', 'password1!'),
+  createUser('user1', 'user@email.com', 'Password1!'),
   {
     username: 'admin',
     email: 'admin@admin.com',
