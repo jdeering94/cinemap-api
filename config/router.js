@@ -1,5 +1,6 @@
 import express from 'express';
 import filmController from '../controllers/filmController.js';
+import userController from '../controllers/userController.js';
 
 const router = express.Router();
 
@@ -14,5 +15,10 @@ router
   .delete(filmController.deleteFilm);
 
 router.route('/film/:continent').get(filmController.getAllFilmsByContinent);
+
+router.route('/register').post(userController.registerUser);
+router.route('/login').post(userController.loginUser);
+router.route('/users').get(userController.getAllUsers);
+router.route('/users/:userId').delete(userController.deleteUser);
 
 export default router;
