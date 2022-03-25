@@ -15,8 +15,11 @@ router
   .route('/film/:id')
   .put(filmController.updateFilm)
   .get(filmController.getFilmById)
-  .delete(filmController.deleteFilm)
-  .post(commentController.createComment);
+  .delete(filmController.deleteFilm);
+
+router
+  .route('/film/:id/comments')
+  .post(secureRoute, commentController.createComment);
 
 router.route('/film/random/randomfilm').get(filmController.getRandomFilm);
 
@@ -28,6 +31,10 @@ router
 router
   .route('/film/continent/:continent')
   .get(filmController.getAllFilmsByContinent);
+
+router
+  .route('/film/:id/comment/:commentId')
+  .delete(secureRoute, commentController.deleteComment);
 
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);
