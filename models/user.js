@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema({
     validate: (password) => passwordRegex.test(password),
   },
   isAdmin: { type: Boolean },
+  likedFilms: [{ type: mongoose.Schema.ObjectId, ref: 'Film' }],
 });
 
 userSchema.plugin(uniqueValidator);

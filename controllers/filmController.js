@@ -63,6 +63,46 @@ const deleteFilm = async (req, res, next) => {
   }
 };
 
+const getRandomFilm = async (req, res, next) => {
+  console.log('function has fired');
+  try {
+    const randomFilm = await Film.find().skip(0).limit(1);
+    return res.status(200).json(randomFilm);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const addLikedFilm = async (req, res, next) => {
+  try {
+    const film = await Film.findById(req.params.id);
+    if (film.likedBy.includes(req.currentUser._id)) {
+      return res.status(402).json({ message: 'User has already liked this' });
+    }
+
+    film.likedBy.push(req.currentUser._id);
+    await film.save();
+    return res.status(200).json(film);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const removeLikedFilm = async (req, res, next) => {
+  try {
+    const film = await Film.findById(req.params.id);
+    if (film.likedBy.includes(!req.currentUser._id)) {
+      return res.status(402).json({ message: 'User has not liked this' });
+    }
+
+    film.likedBy.pull(req.currentUser._id);
+    await film.save();
+    return res.status(200).json(film);
+  } catch (err) {
+    next(err);
+  }
+};
+
 export default {
   createFilm,
   getAllFilms,
@@ -70,4 +110,7 @@ export default {
   deleteFilm,
   getFilmById,
   getAllFilmsByContinent,
+  getRandomFilm,
+  addLikedFilm,
+  removeLikedFilm,
 };
