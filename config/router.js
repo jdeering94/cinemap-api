@@ -32,6 +32,9 @@ router
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);
 router.route('/users').get(userController.getAllUsers);
-router.route('/users/:userId').delete(userController.deleteUser);
+router
+  .route('/users/:userId')
+  .delete(userController.deleteUser)
+  .get(secureRoute, userController.getAllLikedFilmsForUser);
 
 export default router;
