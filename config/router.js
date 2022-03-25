@@ -23,6 +23,10 @@ router
   .route('/film/continent/:continent')
   .get(filmController.getAllFilmsByContinent);
 
+router
+  .route('/film/:id/comment/:commentId')
+  .delete(commentController.deleteComment);
+
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);
 router.route('/users').get(userController.getAllUsers);
