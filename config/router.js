@@ -1,6 +1,7 @@
 import express from 'express';
 import filmController from '../controllers/filmController.js';
 import userController from '../controllers/userController.js';
+import commentController from '../controllers/commentController.js';
 
 const router = express.Router();
 
@@ -13,7 +14,8 @@ router
   .route('/film/:id')
   .put(filmController.updateFilm)
   .get(filmController.getFilmById)
-  .delete(filmController.deleteFilm);
+  .delete(filmController.deleteFilm)
+  .post(commentController.createComment);
 
 router
   .route('/film/continent/:continent')
