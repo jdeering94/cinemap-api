@@ -15,6 +15,8 @@ router
   .get(filmController.getFilmById)
   .delete(filmController.deleteFilm);
 
+router.route('/film/random/randomfilm').get(filmController.getRandomFilm);
+
 router
   .route('/film/continent/:continent')
   .get(filmController.getAllFilmsByContinent);
