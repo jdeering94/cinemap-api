@@ -17,7 +17,7 @@ const secureRoute = async (req, res, next) => {
         return res.status(401).send({ message: 'Unauthorized' });
       }
 
-      const user = await User.findByID(data.userId);
+      const user = await User.findById(data.userId);
 
       if (!user) {
         return res.status(401).send({ message: 'Unathorized' });

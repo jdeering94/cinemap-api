@@ -19,7 +19,7 @@ const filmSchema = new mongoose.Schema(
     description: { type: String, required: true },
     img: { type: String, required: true },
     comments: [commentSchema],
-    likedBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
+    likedBy: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
   },
   { timestamps: true }
 );
