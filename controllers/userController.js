@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 import { secret } from '../config/environment.js';
 import User from '../models/user.js';
 import Film from '../models/film.js';
-import film from '../models/film.js';
 
 const registerUser = async (req, res, next) => {
   if (req.body.password !== req.body.passwordConfirmation) {
