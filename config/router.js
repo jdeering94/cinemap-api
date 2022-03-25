@@ -1,4 +1,5 @@
 import express from 'express';
+import secureRoute from '../middleware/secureRoute.js';
 import filmController from '../controllers/filmController.js';
 import userController from '../controllers/userController.js';
 import commentController from '../controllers/commentController.js';
@@ -18,6 +19,11 @@ router
   .post(commentController.createComment);
 
 router.route('/film/random/randomfilm').get(filmController.getRandomFilm);
+
+router.route('/film/:id/like').put(secureRoute, userController.addLikedFilm);
+router
+  .route('/film/:id/removeLike')
+  .put(secureRoute, userController.removeLikedFilm);
 
 router
   .route('/film/continent/:continent')

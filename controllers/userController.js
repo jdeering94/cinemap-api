@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { secret } from '../config/environment.js';
 import User from '../models/user.js';
+import Film from '../models/film.js';
 
 const registerUser = async (req, res, next) => {
   if (req.body.password !== req.body.passwordConfirmation) {
@@ -59,4 +60,53 @@ const loginUser = async (req, res, next) => {
   }
 };
 
-export default { getAllUsers, registerUser, deleteUser, loginUser };
+const addLikedFilm = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.currentUser._id);
+
+    if (user.likedFilms.includes(req.params.id)) {
+      return res
+        .status(402)
+        .json({ message: 'You have already liked this film' });
+    }
+    user.likedFilms.push(req.params.id);
+    await user.save({ validateModifiedOnly: true });
+
+    const film = await Film.findById(req.params.id);
+    film.likedBy.push(req.currentUser._id);
+    await film.save({ validateModifiedOnly: true });
+
+    return res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const removeLikedFilm = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.currentUser._id);
+    if (user.likedFilms.includes(req.params.id)) {
+      user.likedFilms.pull(req.params.id);
+      await user.save({ validateModifiedOnly: true });
+
+      const film = await Film.findById(req.params.id);
+      film.likedBy.pull(req.currentUser._id);
+      await film.save({ validateModifiedOnly: true });
+
+      return res.status(200).json(user);
+    } else {
+      return res.status(402).json({ message: 'User has not liked this yet' });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+export default {
+  getAllUsers,
+  registerUser,
+  deleteUser,
+  loginUser,
+  addLikedFilm,
+  removeLikedFilm,
+};
