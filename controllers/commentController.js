@@ -1,5 +1,4 @@
 import Film from '../models/film.js';
-import Comment from '../models/film.js';
 
 const createComment = async (request, response, next) => {
   try {
