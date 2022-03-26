@@ -64,9 +64,11 @@ const deleteFilm = async (req, res, next) => {
 };
 
 const getRandomFilm = async (req, res, next) => {
-  console.log('function has fired');
   try {
-    const randomFilm = await Film.find().skip(0).limit(1);
+    const numberOfFilms = await Film.find();
+    const randomFilm = await Film.find()
+      .skip(Math.floor(Math.random() * numberOfFilms.length))
+      .limit(1);
     return res.status(200).json(randomFilm);
   } catch (err) {
     next(err);
