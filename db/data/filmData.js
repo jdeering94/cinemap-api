@@ -370,7 +370,7 @@ const films = [
     'Africa',
     ['English', 'Yoruba'],
     120,
-    'Kunle Afoyalon',
+    'Kunle Afolayan',
     2009,
     'A story of two buddies and a girl...all down on their luck have their lives changed when one of them discovers Araromire, a mysterious figurine in an abandoned shrine which, according to legend bestows seven years of good luck. But no one told them about the next seven years...',
     'https://m.media-amazon.com/images/M/MV5BZWQyY2Q0YWItOTNkOS00YzIyLWE0NTktMzk4ODU4OGQyNGZhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg'
