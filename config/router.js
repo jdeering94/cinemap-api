@@ -34,7 +34,8 @@ router
 
 router
   .route('/film/:id/comment/:commentId')
-  .delete(secureRoute, commentController.deleteComment);
+  .delete(secureRoute, commentController.deleteComment)
+  .put(secureRoute, commentController.updateComment);
 
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);

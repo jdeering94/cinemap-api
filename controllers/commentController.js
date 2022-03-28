@@ -50,4 +50,30 @@ const deleteComment = async (req, res, next) => {
   }
 };
 
-export default { createComment, deleteComment };
+const updateComment = async (req, res, next) => {
+  try {
+    const { id, commentId } = req.params;
+    const film = await Film.findById(id);
+
+    if (!film) {
+      return res.status(404).send({ message: 'Film not found' });
+    }
+
+    const comment = film.comments.id(commentId);
+
+    if (!comment) {
+      return res.status(404).send({ message: 'Comment not found' });
+    }
+    if (!comment.createdBy.equals(req.currentUser._id)) {
+      return res.status(401).send({ message: 'Unauthorized action' });
+    }
+    comment.set(req.body);
+
+    const savedFilm = await film.save();
+    return res.status(200).send(savedFilm);
+  } catch (e) {
+    next(e);
+  }
+};
+
+export default { createComment, deleteComment, updateComment };
