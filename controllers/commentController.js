@@ -36,10 +36,8 @@ const deleteComment = async (req, res, next) => {
       req.currentUser.isAdmin
     ) {
       comment.remove();
-      await film.save();
-      return res
-        .status(200)
-        .send({ message: 'Comment successfully deleted!' + req.params.id });
+      const savedFilm = await film.save();
+      return res.status(200).send(savedFilm);
     }
 
     return res

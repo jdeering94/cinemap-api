@@ -45,4 +45,6 @@ router
   .delete(userController.deleteUser)
   .get(secureRoute, userController.getAllLikedFilmsForUser);
 
+router.route('/users/currentUser/:userId');
+
 export default router;

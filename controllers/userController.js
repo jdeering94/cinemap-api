@@ -25,6 +25,15 @@ const getAllUsers = async (req, res, next) => {
   }
 };
 
+const getCurrentUserById = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.currentUser._id);
+    return res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const deleteUser = async (req, res, next) => {
   try {
     await User.findByIdAndDelete(req.params.id);
@@ -121,4 +130,5 @@ export default {
   addLikedFilm,
   removeLikedFilm,
   getAllLikedFilmsForUser,
+  getCurrentUserById,
 };
