@@ -75,7 +75,7 @@ const addLikedFilm = async (req, res, next) => {
 
     if (user.likedFilms.includes(req.params.id)) {
       return res
-        .status(402)
+        .status(400)
         .json({ message: 'You have already liked this film' });
     }
     user.likedFilms.push(req.params.id);
@@ -85,7 +85,7 @@ const addLikedFilm = async (req, res, next) => {
     film.likedBy.push(req.currentUser._id);
     await film.save({ validateModifiedOnly: true });
 
-    return res.status(200).json(user);
+    return res.status(200).json(film);
   } catch (err) {
     next(err);
   }
@@ -102,9 +102,9 @@ const removeLikedFilm = async (req, res, next) => {
       film.likedBy.pull(req.currentUser._id);
       await film.save({ validateModifiedOnly: true });
 
-      return res.status(200).json(user);
+      return res.status(200).json(film);
     } else {
-      return res.status(402).json({ message: 'User has not liked this yet' });
+      return res.status(400).json({ message: 'User has not liked this yet' });
     }
   } catch (err) {
     next(err);
