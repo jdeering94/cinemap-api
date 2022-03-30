@@ -37,7 +37,7 @@ const films = [
   createFilm(
     'I Am Cuba',
     'Cuba',
-    'South America',
+    'North America',
     'Spanish',
     141,
     'Mikhail Kalatozov',
@@ -125,7 +125,7 @@ const films = [
   createFilm(
     'Memories of Underdevelopment',
     'Cuba',
-    'South America',
+    'North America',
     'Spanish',
     97,
     'Tomás Gutiérrez Alea',
@@ -454,10 +454,10 @@ const films = [
   ),
   createFilm(
     'Wake in Fright',
-    '109',
+    'Australia',
     'Oceania',
     'English',
-    92,
+    109,
     'Ted Kotcheff',
     1971,
     'After a bad gambling bet, a schoolteacher is marooned in a town full of crazy, drunk, violent men who threaten to make him just as crazy, drunk, and violent.',
