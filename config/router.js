@@ -39,10 +39,10 @@ router
 
 router.route('/register').post(userController.registerUser);
 router.route('/login').post(userController.loginUser);
-router.route('/users').get(userController.getAllUsers);
+router.route('/users').get(secureRoute, userController.getAllUsers);
 router
   .route('/users/:userId')
-  .delete(userController.deleteUser)
+  .delete(secureRoute, userController.deleteUser)
   .get(secureRoute, userController.getAllLikedFilmsForUser);
 
 router
