@@ -15,7 +15,7 @@ router
   .route('/film/:id')
   .put(filmController.updateFilm)
   .get(filmController.getFilmById)
-  .delete(filmController.deleteFilm);
+  .delete(secureRoute, filmController.deleteFilm);
 
 router
   .route('/film/:id/comments')

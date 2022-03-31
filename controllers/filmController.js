@@ -56,7 +56,7 @@ const deleteFilm = async (req, res, next) => {
   try {
     await Film.findByIdAndDelete(req.params.id);
     return res
-      .status(404)
+      .status(200)
       .send({ message: 'Film successfully deleted!' + req.params.id });
   } catch (e) {
     next(e);
