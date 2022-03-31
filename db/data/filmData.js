@@ -507,6 +507,50 @@ const films = [
     'Set on a remote Pacific island, covered in rain forest and dominated by an active volcano, this heartfelt story, enacted by the Yakel tribe, tells of loyalty, a forbidden love affair and the pact between the old ways and the new.',
     'https://m.media-amazon.com/images/M/MV5BODlhM2VkMTEtMzgwMy00MmEyLThmYTktZTQ4NDQ1NWE4NTY4XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg'
   ),
+  createFilm(
+    'A Separation',
+    'Iran',
+    'Asia',
+    'Farsi',
+    123,
+    'Asghar Farhadi',
+    2011,
+    'A married couple are faced with a difficult decision - to improve the life of their child by moving to another country or to stay in Iran and look after a deteriorating parent who has dementia.',
+    'https://m.media-amazon.com/images/M/MV5BN2JmMjViMjMtZTM5Mi00ZGZkLTk5YzctZDg5MjFjZDE4NjNkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg'
+  ),
+  createFilm(
+    "Where is the Friend's House?",
+    'Iran',
+    'Asia',
+    'Farsi',
+    83,
+    'Abbas Kiarostami',
+    1987,
+    "8 year old Ahmed has mistakenly taken his friend Mohammad's notebook. He wants to return it, or else his friend will be expelled from school. Determinedly, the conscientious boy sets out to find Mohammad's home in the neighbouring village.",
+    'https://m.media-amazon.com/images/M/MV5BZDRhMGY4MzYtMTU3Mi00ZmE1LTg2ZjgtZTg3YzFmNjY0MGM0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg'
+  ),
+  createFilm(
+    'Mother India',
+    'India',
+    'Asia',
+    'Hindi',
+    172,
+    'Mehboob Khan',
+    1957,
+    'In this melodrama, a poverty-stricken woman raises her sons through many trials and tribulations. But no matter the struggles, always sticks to her own moral code.',
+    'https://images-na.ssl-images-amazon.com/images/I/719j4AwIXcL._RI_.jpg'
+  ),
+  createFilm(
+    'Pather Panchali',
+    'India',
+    'Asia',
+    'Bengali',
+    125,
+    'Satyajit Ray',
+    1955,
+    'Impoverished priest Harihar Ray, dreaming of a better life for himself and his family, leaves his rural Bengal village in search of work.',
+    'https://m.media-amazon.com/images/M/MV5BMmFkNDY5OTktNzY3Yy00OTFlLThhNjktOTRhMmZjZmIxYjAxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg'
+  ),
 ];
 
 export default films;
