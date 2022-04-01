@@ -551,6 +551,94 @@ const films = [
     'Impoverished priest Harihar Ray, dreaming of a better life for himself and his family, leaves his rural Bengal village in search of work.',
     'https://m.media-amazon.com/images/M/MV5BMmFkNDY5OTktNzY3Yy00OTFlLThhNjktOTRhMmZjZmIxYjAxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg'
   ),
+  createFilm(
+    'Sátántangó',
+    'Hungary',
+    'Europe',
+    'Hungarian',
+    439,
+    'Béla Tarr',
+    1994,
+    'On the eve of a large payment, residents of a collapsing collective farm see their plans turn into desolation when they discover that Irimiás, a former co-worker who they thought was dead, is returning to the community.',
+    'https://m.media-amazon.com/images/M/MV5BMjM5MmFlZjYtYjliYS00OTk0LThiZmUtZWFhNDRjMDc2YWFkXkEyXkFqcGdeQXVyODU1OTc0MzI@._V1_.jpg'
+  ),
+  createFilm(
+    'Black Girl',
+    'Senegal',
+    'Africa',
+    'French',
+    55,
+    'Béla Tarr',
+    1966,
+    'A black girl from Senegal becomes a servant in France.',
+    'https://m.media-amazon.com/images/M/MV5BYjJkYmE3YWMtODk4ZC00NGJmLTkzZjMtMzZlY2FjOWVhY2JjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg'
+  ),
+  createFilm(
+    'Chopper',
+    'Australia',
+    'Oceania',
+    'English',
+    94,
+    'Andrew Dominik',
+    2000,
+    'Chopper tells the intense story of Mark "Chopper" Read, a legendary criminal who wrote his autobiography while serving a jail sentence in prison. His book, "From the Inside", upon which the film is based, was a best-seller.',
+    'https://m.media-amazon.com/images/M/MV5BYjFhYWQyNTUtN2EwMy00ZDNiLTkyYjYtYjk2NGY5ZTc2YzIwXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg'
+  ),
+  createFilm(
+    'La ciénaga',
+    'Argentina',
+    'South America',
+    'Spanish',
+    100,
+    'Lucrecia Martel',
+    2001,
+    'The life of two women and their families in a small provincial town of Salta, Argentina.',
+    'https://m.media-amazon.com/images/M/MV5BYWM2N2U2ODUtNTQzZC00OWY4LWE5ZTMtM2FkNjQ5ZDU2ZTJjXkEyXkFqcGdeQXVyMTEwODYxODM1._V1_.jpg'
+  ),
+  createFilm(
+    'The Motorcycle Diaries',
+    'Argentina',
+    'South America',
+    ['Spanish', 'Quechua'],
+    126,
+    'Walter Salles',
+    2001,
+    "The dramatization of a motorcycle road trip Che Guevara went on in his youth that showed him his life's calling.",
+    'https://m.media-amazon.com/images/M/MV5BMTYzNjAxOTU3MF5BMl5BanBnXkFtZTcwMzg0NTkyMw@@._V1_.jpg'
+  ),
+  createFilm(
+    'Polytechnique',
+    'Canada',
+    'North America',
+    ['French', 'English'],
+    77,
+    'Denis Villenueve',
+    2009,
+    'A dramatization of the 1989 Montréal Massacre, during which several female engineering students were murdered by an unstable misogynist.',
+    'https://www.themoviedb.org/t/p/original/wjE3JXpSXli81AY9Sqf7a0j9bZv.jpg'
+  ),
+  createFilm(
+    'Incendies',
+    'Canada',
+    'North America',
+    ['Arabic', 'French'],
+    130,
+    'Denis Villenueve',
+    2010,
+    "Twins journey to the Middle East to discover their family history and fulfill their mother's last wishes.",
+    'https://m.media-amazon.com/images/M/MV5BMjIxODYyMTA4NV5BMl5BanBnXkFtZTcwMzg4NjY5Mw@@._V1_.jpg'
+  ),
+  createFilm(
+    "J'ai tué ma mère",
+    'Canada',
+    'North America',
+    'French',
+    96,
+    'Xavier Dolan',
+    2009,
+    'A semi-autobiographical story about Hubert as a young homosexual at odds with his mother.',
+    'https://m.media-amazon.com/images/M/MV5BMTE4NDQ1NjctMTEzNi00ODI0LTk2MDctM2I0NzQyNzM5NmQwXkEyXkFqcGdeQXVyMjQ2MTk1OTE@._V1_.jpg'
+  ),
 ];
 
 export default films;
