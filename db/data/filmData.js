@@ -629,7 +629,7 @@ const films = [
     'https://m.media-amazon.com/images/M/MV5BMjIxODYyMTA4NV5BMl5BanBnXkFtZTcwMzg4NjY5Mw@@._V1_.jpg'
   ),
   createFilm(
-    "J'ai tué ma mère",
+    'I Killed My Mother',
     'Canada',
     'North America',
     'French',
