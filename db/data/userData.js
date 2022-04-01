@@ -3,9 +3,9 @@ const createUser = (username, email, password) => {
 };
 
 const users = [
-  createUser('user1', 'user1@email.com', 'Password1!'),
-  createUser('user2', 'user2@email.com', 'Password1!'),
-  createUser('user3', 'user3@email.com', 'Password1!'),
+  createUser('Dani', 'Dani@email.com', 'Password1!'),
+  createUser('Gabriel', 'Gabriel@email.com', 'Password1!'),
+  createUser('Joe', 'Joe@email.com', 'Password1!'),
   {
     username: 'admin',
     email: 'admin@admin.com',
