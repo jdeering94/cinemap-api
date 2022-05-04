@@ -22,14 +22,18 @@ Create a fullstack app using MongoDB and React, the app has to have basic CRUD f
 
 <p>
 <img src="./assets/cinemap-home.png" />
-
 </p>
+
 <p align="center">
 <img src="./assets/cinemap-continent.png" width = "47%" />
 <img src="./assets/cinemap-film.png" width="47%"/>
 </p>
 
 # Preliminary work
+
+<p>
+<img src="./assets/cinemap-excalidraw.png" />
+</p>
 
 # Day 1
 
