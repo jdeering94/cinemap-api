@@ -4,7 +4,7 @@ GA SEI Project 3 API
 
 # Project 3
 
-Cinemap is meant to be a website that allows users to navigate through a database of world cinema organised by continent. The site also allows users to submit their own picks for films, and create reviews and likes for the films. The database was made using MongoDB, and the frontend was made using Bulma and React. This was a group project, together with by [Dani Gordon]() and [Gabriel Arafa](https://github.com/gabriel-arafa)
+Cinemap is meant to be a website that allows users to navigate through a database of world cinema organised by continent. The site also allows users to submit their own picks for films, and create reviews and likes for the films. The database was made using MongoDB, and the frontend was made using Bulma and React. This was a group project, together with by [Dani Gordon](https://github.com/Dani-Gordon) and [Gabriel Arafa](https://github.com/gabriel-arafa)
 
 **Duration** 7 days.
 
@@ -232,8 +232,8 @@ I would like to improve the editing function on the frontend, and also flesh out
 ### Contact Me
 Email: JDeering94@gmail.com
 
-LinkedIn: https://www.linkedin.com/in/joe-deering/
+[LinkedIn](https://www.linkedin.com/in/joe-deering/)
 
-Portfolio: joedeering.co.uk
+[Portfolio](https://www.joedeering.co.uk)
 
 Feel free to share feedback or if you are aware of any job opportunities please let me know.
